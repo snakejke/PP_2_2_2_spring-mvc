@@ -51,9 +51,11 @@ public class Car {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof Car car)) {
+        if (!(o instanceof Car)) {
             return false;
         }
+
+        Car car = (Car) o;
 
         if (series != car.series) {
             return false;
@@ -71,4 +73,5 @@ public class Car {
         result = 31 * result + releaseDate;
         return result;
     }
+
 }
